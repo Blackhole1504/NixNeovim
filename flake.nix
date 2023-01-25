@@ -9,7 +9,7 @@
       flake = false;
     };
 
-    nixneovimplugins.url = "github:nixneovim/nixneovimplugins";
+    nixneovimplugins.url = "github:Blackhole1504/NixNeovimPlugins";
     nix-flake-tests.url = "github:antifuchs/nix-flake-tests";
   };
 
