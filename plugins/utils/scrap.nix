@@ -13,7 +13,7 @@ let
   moduleOptions = with helpers; {
     # add module options here
     #
-     autoStart = boolOption true "Enable this pugin at start"
+     autoStart = boolOption true "Enable this pugin at start";
   };
 
    pluginOptions = {
