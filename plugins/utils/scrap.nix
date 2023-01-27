@@ -38,8 +38,6 @@ mkLuaPlugin {
     # add dependencies here
     # tree-sitter
   ];
-  extraConfigLua = ''
-    require('${name}').setup patterns = {{ "foo", "bar", options = {capitalized = false, all_caps = true}}} ${toLuaObject pluginOptions}
-  '';
+  extraConfigLua = "require('${name}').setup ${toLuaObject pluginOptions}";
   defaultRequire = true;
 }
