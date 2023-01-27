@@ -5,7 +5,7 @@ with lib;
 let
 
   name = "scrap";
-  pluginUrl = "Mateiadrielrafael/scrap.nvim";
+  pluginUrl = "https://github.com/Mateiadrielrafael/scrap.nvim";
 
   helpers = import ../helpers.nix { inherit lib config; };
   cfg = config.programs.nixneovim.plugins.${name};
