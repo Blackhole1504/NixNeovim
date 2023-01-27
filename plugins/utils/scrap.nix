@@ -19,7 +19,7 @@ let
    pluginOptions = {
      # manually add plugin mapping of module options here
      #
-      auto_start = cfg.autoStart
+      auto_start = cfg.autoStart;
    };
 
   # you can autogenerate the plugin options from the moduleOptions.
