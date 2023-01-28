@@ -12,7 +12,7 @@ let
 
   moduleOptions = with helpers; {
     patterns = mkOption {
-      type = types.attrs;
+      type = types.string;
       default = { };
     };
     autoStart = boolOption true "Enable this pugin at start";
