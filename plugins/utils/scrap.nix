@@ -38,7 +38,7 @@ mkLuaPlugin {
   ];
   extraPackages = with pkgs; [
     # add dependencies here
-    # tree-sitter
+    plenary-nvim
   ];
   extraConfigLua = "require('${name}').setup ${toLuaObject pluginOptions}";
   defaultRequire = true;
