@@ -32,11 +32,11 @@ mkLuaPlugin {
   inherit name moduleOptions pluginUrl;
   extraPlugins = with pkgs.vimExtraPlugins; [
     # add neovim plugin here
-    # nvim-treesitter
+    scrap-nvim
   ];
   extraPackages = with pkgs; [
     # add dependencies here
-    scrap-nvim
+    # tree-sitter
   ];
   extraConfigLua = "require('${name}').setup ${toLuaObject pluginOptions}";
   defaultRequire = true;
