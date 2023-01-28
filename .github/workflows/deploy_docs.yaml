@@ -19,7 +19,7 @@ jobs:
           path: result/share/doc
   deploy:
     needs: [build]
-    permission:
+    permissions:
       pages: write
       id-token: write
     environment:
