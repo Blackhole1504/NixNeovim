@@ -36,7 +36,7 @@ mkLuaPlugin {
   ];
   extraPackages = with pkgs; [
     # add dependencies here
-    # tree-sitter
+    scrap-nvim
   ];
   extraConfigLua = "require('${name}').setup ${toLuaObject pluginOptions}";
   defaultRequire = true;
