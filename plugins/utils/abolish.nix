@@ -32,7 +32,7 @@ mkLuaPlugin {
   inherit name moduleOptions pluginUrl;
   extraPlugins = with pkgs.vimExtraPlugins; [
     # add neovim plugin here
-    abolish-vim
+    vim-abolish
   ];
   extraPackages = with pkgs; [
     # add dependencies here
