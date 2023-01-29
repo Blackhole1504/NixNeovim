@@ -11,11 +11,6 @@ let
   cfg = config.programs.nixneovim.plugins.${name};
 
   moduleOptions = with helpers; {
-    patterns = mkOption {
-      type = types.listOf;
-      description = "patterns";
-      default = [ ];
-    };
     autoStart = boolOption true "Enable this pugin at start";
   };
 
