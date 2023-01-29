@@ -11,7 +11,7 @@ let
   cfg = config.programs.nixneovim.plugins.${name};
 
   moduleOptions = with helpers; {
-    autoStart = boolOption true "Enable this pugin at start";
+  #  autoStart = boolOption true "Enable this pugin at start";
   };
 
   # pluginOptions = {
