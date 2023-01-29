@@ -11,10 +11,7 @@ let
   cfg = config.programs.nixneovim.plugins.${name};
 
   moduleOptions = with helpers; {
-    patterns = mkOption {
-      type = types.str;
-      default = " ";
-    };
+    patterns = attrsOption;
     autoStart = boolOption true "Enable this pugin at start";
   };
 
@@ -34,7 +31,7 @@ mkLuaPlugin {
   inherit name moduleOptions pluginUrl;
   extraPlugins = with pkgs.vimExtraPlugins; [
     # add neovim plugin here
-    scrap-nvim
+    scrap
   ];
   extraPackages = with pkgs; [
     # add dependencies here

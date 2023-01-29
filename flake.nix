@@ -2,7 +2,7 @@
   description = "A neovim configuration system for NixOS";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     nmd = {
       url = "gitlab:rycee/nmd";
