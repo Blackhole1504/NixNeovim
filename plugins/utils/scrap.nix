@@ -31,10 +31,10 @@ mkLuaPlugin {
   extraPlugins = with pkgs.vimExtraPlugins; [
     # add neovim plugin here
     scrap
+    plenary-nvim
   ];
   extraPackages = with pkgs; [
     # add dependencies here
-    plenary-nvim
   ];
   extraConfigLua = "require('${name}').setup ${toLuaObject pluginOptions}";
   defaultRequire = true;
