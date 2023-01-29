@@ -6,7 +6,7 @@ with helpers; with lib;
 mkPlugin attrs {
   name = "abolish";
   description = "Enable abolish.vim";
-  extraPlugins = [ pkgs.vimExtraPlugins.abolish ];
+  extraPlugins = [ pkgs.vimExtraPlugins.vim-abolish ];
 
   options = { };
 }
