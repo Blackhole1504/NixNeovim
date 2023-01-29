@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 git clone https://github.com/pta2002/nixvim pta
-git clone https://github.com/nixneovim/nixneovim me
+git clone https://github.com/Blackhole1504/nixneovim me
 
 # list plugins of pta
 plugins_pta="$(find ./pta/plugins -type f -printf "%f\n" | sort | uniq)"
