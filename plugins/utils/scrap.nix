@@ -12,7 +12,7 @@ let
 
   moduleOptions = with helpers; {
     patterns = mkOption {
-      type = types.list;
+      type = types.listOf;
       description = "patterns";
       default = [ ];
     };
