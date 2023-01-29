@@ -1,7 +1,9 @@
-name: Build and deploy docs
+name: Commit docs
 
 on:
   push:
+    branches: 
+      - test
   workflow_dispatch:
 
 jobs:
@@ -17,35 +19,12 @@ jobs:
         with:
           name: docs
           path: result/share/doc
-  deploy:
-    needs: [build]
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
-  #     - name: Checkout GitHub Pages repository
-  #       uses: actions/checkout@v2
-  #       with:
-  #         repository: NixNeovim/NixNeovim.github.io
-  #         ref: main
-  #         token: ${{ secrets.GIHUB_TOKEN }}
-  #     - name: Download artifacts
-  #       uses: actions/download-artifact@v2
-  #       with:
-  #         name: docs
-  #         path: docs
-  #     - name: Deploy to GitHub Pages
-  #       run: |
-  #         git config user.name "GitHub Actions"
-  #         git config user.email "action@github.com"
-  #         git add -A
-  #         git commit -m "Deploy docs"
-  #         git push
 
+      - name: Upload docs
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_user_name: FetchPluginsBot
+          commit_user_email: 1298403+Blackhole1504@users.noreply.github.com
+          commit_author: Blackhole1504 <1298403+Blackhole1504@users.noreply.github.com>
+          commit_message: 'bot: Update doc'
+          file_pattern: default.nix man-nixneovim.xml man-pages.xml manual.xml
