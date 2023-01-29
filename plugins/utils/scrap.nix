@@ -12,9 +12,9 @@ let
 
   moduleOptions = with helpers; {
     patterns = mkOption {
-      type = types.attrsOf types.anything;
+      type = types.list;
       description = "patterns";
-      default = { };
+      default = [ ];
     };
     autoStart = boolOption true "Enable this pugin at start";
   };
