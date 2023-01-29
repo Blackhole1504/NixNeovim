@@ -17,7 +17,7 @@ with lib;
 
 let
 
-  name = "abolish";
+  name = "vim-abolish";
   pluginUrl = "https://github.com/tpope/vim-abolish";
 
   helpers = import ../helpers.nix { inherit lib config; };
