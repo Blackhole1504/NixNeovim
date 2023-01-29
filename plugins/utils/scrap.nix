@@ -11,7 +11,9 @@ let
   cfg = config.programs.nixneovim.plugins.${name};
 
   moduleOptions = with helpers; {
-  #  autoStart = boolOption true "Enable this pugin at start";
+    # add module options here
+    #
+    # autoStart = boolOption true "Enable this pugin at start"
   };
 
   # pluginOptions = {
@@ -30,11 +32,11 @@ mkLuaPlugin {
   inherit name moduleOptions pluginUrl;
   extraPlugins = with pkgs.vimExtraPlugins; [
     # add neovim plugin here
-    scrap
-    plenary-nvim
+    # nvim-treesitter
   ];
   extraPackages = with pkgs; [
     # add dependencies here
+    # tree-sitter
   ];
   extraConfigLua = "require('${name}').setup ${toLuaObject pluginOptions}";
   defaultRequire = true;
